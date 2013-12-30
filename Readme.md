@@ -69,6 +69,6 @@ app.use(function (req, res, next) {
 If you want to retry, here is [another option](https://github.com/expressjs/session/issues/99#issuecomment-63853989).
 
 License
-=======
+-------
 
 MIT
