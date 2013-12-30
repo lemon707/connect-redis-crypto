@@ -1,6 +1,6 @@
-[![npm](https://img.shields.io/npm/v/connect-redis.svg)](https://npmjs.com/package/connect-redis) [![Dependencies](https://img.shields.io/david/tj/connect-redis.svg)](https://david-dm.org/tj/connect-redis) ![Downloads](https://img.shields.io/npm/dm/connect-redis.svg)
+[![npm](https://img.shields.io/npm/v/connect-redis-crypto.svg)](https://npmjs.com/package/connect-redis-crypto) [![Dependencies](https://img.shields.io/david/jas-/connect-redis-crypto.svg)](https://david-dm.org/jas-/connect-redis-crypto) ![Downloads](https://img.shields.io/npm/dm/connect-redis-crypto.svg)
 
-**connect-redis** is a Redis session store backed by [node_redis](http://github.com/mranney/node_redis), and is insanely fast :). Requires redis >= `2.0.0` for the *SETEX* command.
+connect-redis-crypto (fork of [connect-redis](https://github.com/tj/connect-redis)) is a Redis session store backed by [node_redis](http://github.com/mranney/node_redis), and is insanely fast :). Requires redis >= `2.0.0` for the _SETEX_ command.
 
 Setup
 -----
@@ -24,19 +24,13 @@ app.use(session({
 Options
 -------
 
-A Redis client is required. An existing client can be passed directly using the `client` param or created for you using the `host`, `port`, or `socket` params. 
-
-- `client` An existing client
-- `host` Redis server hostname 
-- `port` Redis server portno
-- `socket` Redis server unix_socket
-- `url` Redis server url
+A Redis client is required. An existing client can be passed directly using the `client` param or created for you using the `host`, `port`, or `socket` params. - `client` An existing client - `host` Redis server hostname - `port` Redis server portno - `socket` Redis server unix_socket - `url` Redis server url
 
 The following additional params may be included:
 
--	`ttl` Redis session TTL (expiration) in seconds. Defaults to session.maxAge (if set), or one day.
+-	`ttl` Redis session TTL (expiration) in seconds
 -	`disableTTL` Disables setting TTL, keys will stay in redis until evicted by other means (overides `ttl`\)
--	`db` Database index to use. Defaults to Redis's default (0).
+-	`db` Database index to use
 -	`pass` Password for Redis authentication
 -	`prefix` Key prefix defaulting to "sess:"
 -	`unref` Set `true` to unref the Redis client. **Warning**: this is [an experimental feature](https://github.com/mranney/node_redis#clientunref).
@@ -45,6 +39,10 @@ The following additional params may be included:
 	-	If `true`, a default logging function (`console.error`) is provided.
 	-	If a function, it is called anytime an error occurs (useful for custom logging)
 	-	If `false`, no logging occurs.
+-	`secret` Encryption secret (setting this will enable transparent encryption functionality)
+-	`algorithm` Symmetric encryption algorithm (defaults to `aes-256-ctr`)
+-	`hashing` Hashing algorithm to use for HMAC of ciphertext (defaults to `sha512`)
+-	`encodeas` Default encoding of cipher text for storage (defaults to `hex`)
 
 Any options not included in this list will be passed to the redis `createClient()` method directly.
 
@@ -75,6 +73,6 @@ app.use(function (req, res, next) {
 If you want to retry, here is [another option](https://github.com/expressjs/session/issues/99#issuecomment-63853989).
 
 License
-=======
+-------
 
 MIT
