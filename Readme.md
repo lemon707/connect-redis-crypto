@@ -1,6 +1,6 @@
 # Connect Redis
 
-connect-redis is a Redis session store backed by [node_redis](http://github.com/mranney/node_redis), and is insanely fast :). Requires redis >= `2.0.0` for the _SETEX_ command.
+connect-redis-crypto (fork of connect-redis) is a Redis session store backed by [node_redis](http://github.com/mranney/node_redis), and is insanely fast :). Requires redis >= `2.0.0` for the _SETEX_ command.
 
 ## connect-redis `>= 2.0.0` support only express `>= 4.0.0`. Use connect-redis 1.4.7 for express 3x.
 
