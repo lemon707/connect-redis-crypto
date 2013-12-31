@@ -29,7 +29,7 @@
     "node": "*"
   },
   "bugs": {
-    "url": "https://github.com/visionmedia/connect-redis/issues"
+    "url": "https://github.com/jas-/connect-redis-crypto/issues"
   },
   "scripts": {
     "test": "DEBUG=* istanbul cover tape \"test/*-test.js\"",
