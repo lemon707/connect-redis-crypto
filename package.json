@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/jas-/connect-redis-crypto/issues"
   },
-  "scripts":{
-    "test":"node test.js; node test_crypto.js"
+  "scripts": {
+    "test": "node test.js; node test_crypto.js"
   }
 }
