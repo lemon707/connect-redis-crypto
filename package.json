@@ -1,7 +1,6 @@
 {
   "name": "connect-redis",
   "description": "Redis session store for Connect",
-<<<<<<< 9a7c65de732990adb8861ce9d71be158da8f8fe2
   "version": "3.2.0",
   "author": "TJ Holowaychuk <tj@vision-media.ca>",
   "contributors": [
@@ -30,15 +29,6 @@
   "engines": {
     "node": "*"
   },
-=======
-  "version": "2.0.0",
-  "authors": ["TJ Holowaychuk <tj@vision-media.ca>","Jason Gerfen <jason.gerfen@gmail.com>"],
-  "main": "./index.js",
-  "repository": { "type": "git", "url": "git@github.com:jas-/connect-redis-crypto.git" },
-  "dependencies": { "redis": "0.10.x", "debug": "*" },
-  "devDependencies": { "express-session": "*" },
-  "engines": { "node": "*" },
->>>>>>> Fix in readme
   "bugs": {
     "url": "https://github.com/jas-/connect-redis-crypto/issues"
   },
