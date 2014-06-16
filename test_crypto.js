@@ -4,10 +4,12 @@
  */
 
 var assert = require('assert')
-  , connect = require('connect')
-  , RedisStore = require('./')(connect);
+  , session = require('express-session')
+  , RedisStore = require('./')(session);
 
 var store = new RedisStore({ secret: 'foo bar' });
+var store_alt = new RedisStore({ db: 15 });
+var store_url = new RedisStore({ url: "redis://localhost:6379/db2" });
 
 store.client.on('connect', function(){
   // #set()
@@ -24,7 +26,9 @@ store.client.on('connect', function(){
       store.set('123', { cookie: { maxAge: 2000 }, name: 'tj' }, function(){
         store.destroy('123', function(){
          console.log('done');
-         store.client.end(); 
+         store.client.end();
+         store_alt.client.end();
+         store_url.client.end();
          process.exit(0);
         });
       });
