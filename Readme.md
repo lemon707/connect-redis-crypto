@@ -29,15 +29,12 @@ The following additional params may be included:
   - `db` Database index to use
   - `pass` Password for Redis authentication
   - `prefix` Key prefix defaulting to "sess:"
-<<<<<<< HEAD
   - `url` String that contains connection information in a single url (redis://user:pass@host:port/db)
   - `secret` If specifies enables encryption for session data
   - ...    Remaining options passed to the redis `createClient()` method.
-=======
   - `unref` Set `true` to unref the Redis client. **Warning**: this is [an experimental feature](https://github.com/mranney/node_redis#clientunref).
 
 Any options not included in this list will be passed to the redis `createClient()` method directly.
->>>>>>> upstream/master
 
 ## Usage
 
