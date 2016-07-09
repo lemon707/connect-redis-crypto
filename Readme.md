@@ -1,6 +1,6 @@
-[![npm](https://img.shields.io/npm/v/connect-redis.svg)](https://npmjs.com/package/connect-redis) [![Dependencies](https://img.shields.io/david/tj/connect-redis.svg)](https://david-dm.org/tj/connect-redis) ![Downloads](https://img.shields.io/npm/dm/connect-redis.svg)
+[![npm](https://img.shields.io/npm/v/connect-redis-crypto.svg)](https://npmjs.com/package/connect-redis) [![Dependencies](https://img.shields.io/david/jas-/connect-redis-crypto.svg)](https://david-dm.org/tj/connect-redis) ![Downloads](https://img.shields.io/npm/dm/connect-redis-crypto.svg)
 
-connect-redis-crypto (fork of connect-redis) is a Redis session store backed by [node_redis](http://github.com/mranney/node_redis), and is insanely fast :). Requires redis >= `2.0.0` for the _SETEX_ command.
+connect-redis-crypto (fork of [connect-redis](https://github.com/tj/connect-redis)) is a Redis session store backed by [node_redis](http://github.com/mranney/node_redis), and is insanely fast :). Requires redis >= `2.0.0` for the _SETEX_ command.
 
 Setup
 -----
