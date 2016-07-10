@@ -39,6 +39,10 @@ The following additional params may be included:
 	-	If `true`, a default logging function (`console.error`) is provided.
 	-	If a function, it is called anytime an error occurs (useful for custom logging)
 	-	If `false`, no logging occurs.
+-	`secret` Encryption secret (setting this will enable transparent encryption functionality)
+-	`algorithm` Symmetric encryption algorithm (defaults to `aes-256-ctr`)
+-	`hashing` Hashing algorithm to use for HMAC of ciphertext (defaults to `sha512`)
+-	`encodeas` Default encoding of cipher text for storage (defaults to `hex`)
 
 Any options not included in this list will be passed to the redis `createClient()` method directly.
 
