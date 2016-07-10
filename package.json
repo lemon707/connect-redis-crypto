@@ -11,7 +11,7 @@
   "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:visionmedia/connect-redis.git"
+    "url": "git@github.com:jas-/connect-redis-crypto.git"
   },
   "dependencies": {
     "debug": "^2.2.0",
