@@ -81,6 +81,7 @@ test('options', function (t) {
   t.ok(store.disableTTL, 'disableTTL set');
   t.ok(store.client, 'creates client');
   t.equal(store.client.address, 'localhost:8543', 'sets host and port');
+  t.equal(store.secret, 'secret', 'uses provided crypto key');
 
   var socketStore = new RedisStore({ socket: 'word' });
   t.equal(socketStore.client.address, 'word', 'sets socket address');
