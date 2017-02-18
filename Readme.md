@@ -6,7 +6,7 @@ Setup
 -----
 
 ```sh
-npm install connect-redis express-session
+npm install connect-redis-crypto express-session
 ```
 
 Pass the `express-session` store into `connect-redis` to create a `RedisStore` constructor.
